@@ -13,6 +13,9 @@ import bg from "../../../images/appointment-bg.png";
 const ApointmentBanar = () => {
   const apointmentBg = {
     backgroundImage: `url(${bg})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition:'left center',
     marginTop: 150,
   };
   const overly = {
