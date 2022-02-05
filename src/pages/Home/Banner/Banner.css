@@ -1,0 +1,21 @@
+.background {
+   height:100%;
+   width:100%;
+   background-image: url(../../../images/bg.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   position:relative;
+   z-index: -1;
+}
+.background::after {
+   height:100%;
+   content:' ';
+   position: absolute;
+   top: 0;
+   width: 30%;
+}
+.background::after {
+   right: 0;
+   background-color: rgb(12 14 24 / 80%);
+}

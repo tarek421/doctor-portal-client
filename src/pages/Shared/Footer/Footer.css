@@ -1,0 +1,26 @@
+footer{
+   padding: 0 100px;
+   background-image: url('../../../images/footer-bg.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.footer a{
+   display: block;
+   text-decoration: none;
+   text-align: left;
+   color: #46322ae8;
+   padding: 3px 0px;
+}
+
+.footer button{
+   padding: 5px 10px;
+   border: 1px solid #a5717196;
+   background: aqua;
+   border-radius: 2px;
+}
+
+.icon{
+   font-size: 45px;
+    color: #2196f3;
+    margin: 10px;
+}

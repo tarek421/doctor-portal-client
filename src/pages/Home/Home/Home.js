@@ -3,7 +3,10 @@ import Navigation from '../../Shared/Navigation/Navigation';
 import ApointmentBanar from '../ApoinmentBanar/ApointmentBanar';
 import Banner from '../Banner/Banner';
 import Blog from '../Blog/Blog';
+import Doctors from '../Doctors/Doctors';
 import Services from '../Services/Services';
+import Contact from '../Contact/Contact';
+import Footer from '../../Shared/Footer/Footer';
 
 const Home = () => {
    return (
@@ -13,6 +16,9 @@ const Home = () => {
          <Services/>
          <ApointmentBanar/>
          <Blog/>
+         <Doctors/>
+         <Contact/>
+         <Footer/>
       </div>
    );
 };

@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { Button, Container, Typography } from "@mui/material";
 import chair from "../../../images/chair.png";
-import bg from "../../../images/bg.png";
+import './Banner.css';
 
 const Banner = () => {
   const flex = {
@@ -11,13 +11,15 @@ const Banner = () => {
     display: "flex",
     alignItems: "center",
     padding: "0 20px",
-    height:500
+    height:'100vh',
+    zIndex:1
   };
   return (
-    <Container sx={{ flexGrow: 1 }}>
+    <div className="background">
+      <Container sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         <Grid style={flex} item xs={12} md={5}>
-          <Box style={{padding:'0 25px'}}>
+          <Box>
             <Typography variant="h3">
               Your New Smaile <br />
               Starts Here
@@ -35,6 +37,7 @@ const Banner = () => {
         </Grid>
       </Grid>
     </Container>
+    </div>
   );
 };
 
