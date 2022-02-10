@@ -1,5 +1,7 @@
 import React from 'react';
-import doctor from '../../../images/doctor-small.png';
+import doctor from '../../../images/doctor3.png';
+import doctor1 from '../../../images/doctor1.png';
+import doctor2 from '../../../images/doctor2.png';
 
 const Doctors = () => {
    const doctors=[
@@ -9,12 +11,12 @@ const Doctors = () => {
          phone: '123-456-454'
       },
       {
-         image:`${doctor}`,
+         image:`${doctor1}`,
          name: 'Caudi',
          phone: '123-456-454'
       },
       {
-         image:`${doctor}`,
+         image:`${doctor2}`,
          name: 'Caudi',
          phone: '123-456-454'
       }

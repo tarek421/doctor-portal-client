@@ -32,7 +32,7 @@ const Blog = () => {
    ];
    return (
       <div>
-         <div className="container my-5 py-5">
+         <div className="container my-5 py-5 blog">
             <h5>Our Blog</h5>
             <h1>From Our Blog News</h1>
             <div className="row mt-5">

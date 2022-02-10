@@ -1,4 +1,4 @@
-.card {
+.blog .card {
    border-radius: 10px;
    text-align: left;
 }
@@ -7,7 +7,7 @@
    color: #2d373e;
 }
 
-.card p {
+.blog .card p {
    margin-top: 30px;
    margin-bottom: 1rem;
    font-size: 18px;

@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
+import './Navigation.css';
 
 const Navigation = () => {
 
@@ -23,8 +24,8 @@ const Navigation = () => {
    };
 
    return (
-      <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <Box sx={{ flexGrow: 1, }}>
+      <AppBar className='d-flex align-items-between justify-content-space-between' position="static" style={{backgroundColor:'transparent', color:'black', boxShadow:'0px 0px'}}>
         <Toolbar>
           <IconButton
             size="large"
@@ -35,9 +36,14 @@ const Navigation = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Photos
-          </Typography>
+          <ul className="d-flex justify-content-center align-items-center">
+            <li>Home</li>
+            <li>About</li>
+            <li>Dental Services</li>
+            <li>Review</li>
+            <li>Blog</li>
+            <li>Contact Us</li>
+          </ul>
             <div>
               <IconButton
                 size="large"

@@ -19,3 +19,22 @@
    right: 0;
    background-color: rgb(12 14 24 / 80%);
 }
+
+/* ============HEADER BOTTOM STYLE============= */
+
+.card-container {
+   background: #15d1c3;
+   color:#fff;
+   width: 100%;
+   padding: 20px 30px;
+   height: 135px;
+   border-radius: 5px;
+   align-items: center;
+}
+
+.card-container .icon{
+   color: white;
+}
+.card-container p{
+   font-size:12px;
+}
