@@ -19,7 +19,7 @@ const ExceptionalDental = () => {
             <div className="col-md-7 col-sm-12">
               <div className="dental-content">
                 <h1>Exception Dental Care, On Your Tearms</h1>
-                <p className="mt-md-5">
+                <p className="mt-md-5 lead">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
                   quis, similique cupiditate, placeat, natus est ut veniam
                   minima laudantium impedit at unde. Omnis eligendi ipsam

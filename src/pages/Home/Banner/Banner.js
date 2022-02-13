@@ -4,7 +4,6 @@ import Grid from "@mui/material/Grid";
 import { Button, CardActions, Container, Typography } from "@mui/material";
 import chair from "../../../images/chair.png";
 import "./Banner.css";
-import Navigation from "../../Shared/Navigation/Navigation";
 
 const Banner = () => {
   const flex = {
@@ -16,8 +15,7 @@ const Banner = () => {
     zIndex: 1,
   };
   return (
-    <div className="background">
-               <Navigation/>
+    <div className="background">      
       <Container sx={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
           <Grid style={flex} item xs={12} md={5}>

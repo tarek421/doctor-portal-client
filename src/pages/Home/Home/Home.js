@@ -14,6 +14,7 @@ import ExceptionalDental from '../ExceptionalDental/ExceptionalDental';
 const Home = () => {
    return (
       <div>
+         <Navigation/>
          <Banner/>
          <HeaderBottom/>
          <Services/>
