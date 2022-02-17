@@ -60,6 +60,7 @@ const Navigation = () => {
               >
                 <MenuItem onClick={handleClose}>Profile</MenuItem>
                 <MenuItem onClick={handleClose}>My account</MenuItem>
+                <MenuItem as={Link} to='/login' onClick={handleClose}>Login</MenuItem>
               </Menu>
             </div>
           </Nav>

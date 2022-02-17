@@ -1,0 +1,15 @@
+.apoinment-available h4 {
+  color: #2ddfdf;
+  font-size: 25px;
+  letter-spacing: -1px;
+}
+
+.apoinment-available h3{
+   color: #2c1e21;
+}
+
+.apoinment-available p{
+   color: #4c3440;
+   font-family: sans-serif;
+   font-size: 14px;
+}
