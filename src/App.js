@@ -6,6 +6,7 @@ import Apoinment from "./pages/Apoinment/Apoinment/Apoinment";
 import Login from "./pages/Login/Login/Login";
 
 import { createContext, useState } from "react";
+import Register from "./pages/Login/Register/Register";
 
 export const userContext = createContext();
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/apoinment" element={<Apoinment />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </userContext.Provider>
     </div>

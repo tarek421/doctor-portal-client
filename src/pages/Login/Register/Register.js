@@ -2,24 +2,27 @@ import { Button, TextField } from "@mui/material";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import login from "../../../images/login.png";
-import "./Login.css";
 
-const Login = () => {
-  const [loginData, setLoginData] = useState({});
-  const handleSubmit = (e) => {
-    alert("working submition");
-    e.preventDefault();
-  };
-  const handleChange = (e) => {
-    const feild = e.target.name;
-    const value = e.target.value;
-    const newLoginData = { ...loginData };
-    newLoginData[feild] = value;
-    setLoginData(newLoginData);
-  };
+const Register = () => {
+   const [loginData, setLoginData] = useState({}); 
 
-  return (
-    <div id="login">
+   const handleSubmit = (e) => {
+     if(loginData.password !== loginData.password2){
+        alert("Didn't Match Password");
+        return
+        
+     }
+     e.preventDefault();
+   };
+   const handleChange = (e) => {
+     const feild = e.target.name;
+     const value = e.target.value;
+     const newLoginData = {...loginData};
+     newLoginData[feild] = value;
+     setLoginData(newLoginData);
+   };
+   return (
+      <div id="login">
       <div className="row">
         <div className="col-md-6 col-sm-12">
           <div className="card mx-auto mt-5 pt-5 p-5 w-75 shadow rounded">
@@ -44,11 +47,20 @@ const Login = () => {
                 onChange={handleChange}
                 variant="standard"
               />
+              <TextField
+                style={{ width: "100%" }}
+                id="standard-basic"
+                label="Password Repeat"
+                name="password2"
+                type="password"
+                onChange={handleChange}
+                variant="standard"
+              />
               <Button className="mt-4 mb-2 w-100" variant="contained" type="submit">
                 Submit
               </Button>
-              <Button as={Link} to="/register" variant="text">
-                New User? Go to Register page
+              <Button as={Link} to="/login" variant="text">
+                Already Have an account? Go to Login page
               </Button>
             </form>
           </div>
@@ -58,7 +70,7 @@ const Login = () => {
         </div>
       </div>
     </div>
-  );
+   );
 };
 
-export default Login;
+export default Register;
