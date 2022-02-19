@@ -6,9 +6,12 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { IconButton } from "@mui/material";
 import { AccountCircle } from "@mui/icons-material";
 import { Link } from "react-router-dom";
+import useAuth from "../../../Hooks/useAuth";
 
 const Navigation = () => {
   const [anchorEl, setAnchorEl] = useState(null);
+
+  const { user } = useAuth();
 
   const handleClose = () => {
     setAnchorEl(null);
@@ -60,7 +63,9 @@ const Navigation = () => {
               >
                 <MenuItem onClick={handleClose}>Profile</MenuItem>
                 <MenuItem onClick={handleClose}>My account</MenuItem>
-                <MenuItem as={Link} to='/login' onClick={handleClose}>Login</MenuItem>
+                {
+                  user?.email ? <MenuItem onClick={handleClose}>Log Out</MenuItem>: <MenuItem as={Link} to='/login' onClick={handleClose}>Login</MenuItem>
+                }
               </Menu>
             </div>
           </Nav>
