@@ -9,7 +9,7 @@ import { userContext } from "../../../App";
 
 const BookingModal = ({ open, setOpen, booking }) => {
   const [date] = useContext(userContext);
-  const { name, time, space } = booking;
+  const { name, time } = booking;
 
   const handleClose = () => {
     setOpen(false);

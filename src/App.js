@@ -7,6 +7,8 @@ import Login from "./pages/Login/Login/Login";
 
 import { createContext, useState } from "react";
 import Register from "./pages/Login/Register/Register";
+import AuthProvider from "./contexts/AuthProvider/AuthProvider";
+import PrivetRoute from "./pages/Login/PrivetRoute/PrivetRoute";
 
 export const userContext = createContext();
 
@@ -15,15 +17,19 @@ function App() {
 
   return (
     <div className="App">
-      <userContext.Provider value={[date, setDate]}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/apoinment" element={<Apoinment />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-        </Routes>
-      </userContext.Provider>
+      <AuthProvider>
+        <userContext.Provider value={[date, setDate]}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/apoinment" element={<PrivetRoute>
+              <Apoinment />
+            </PrivetRoute>} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+          </Routes>
+        </userContext.Provider>
+      </AuthProvider>
     </div>
   );
 }

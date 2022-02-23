@@ -3,11 +3,11 @@ import caudi from "../../../images/people-1.png"
 import caudi2 from "../../../images/people-2.png"
 import chair from "../../../images/bg.png"
 import Card from './Card';
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 const Blog = () => {
    const doctors=[
       {
+         id:1,
          name:'Rased Kabir',
          date: '22 Aug 2018',
          title: 'Check at last a doctor in a year or your teath.',
@@ -16,6 +16,7 @@ const Blog = () => {
          bgImage: `${chair}`
       },
       {
+         id:2,
          name:'Dr. Caudi',
          image: `${caudi}`,
          date: '23 Apr 2019',
@@ -23,6 +24,7 @@ const Blog = () => {
          description: "It's long established fact by that by the readable content of a lot layout. The point"
       },
       {
+         id:3,
          name:'Dr. John michael',
          image: `${caudi2}`,
          date: '23 Apr 2019',
@@ -37,7 +39,7 @@ const Blog = () => {
             <h1>From Our Blog News</h1>
             <div className="row mt-5">
                {
-                  doctors.map(doctor => <Card data={doctor}></Card>)
+                  doctors.map(doctor => <Card key={doctor.id} data={doctor}></Card>)
                }
             </div>
          </div>
