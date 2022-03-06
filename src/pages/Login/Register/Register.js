@@ -8,10 +8,11 @@ const Register = () => {
   const [loginData, setLoginData] = useState({});
   const { registerUser, user, isLoading, authError } = useAuth();
 
-  const handleChange = (e) => {
+  const handleOnBlur = (e) => {
     const feild = e.target.name;
     const value = e.target.value;
     const newLoginData = { ...loginData };
+    console.log(loginData);
     newLoginData[feild] = value;
     setLoginData(newLoginData);
   };
@@ -22,7 +23,7 @@ const Register = () => {
       return;
     }
     e.preventDefault();
-    registerUser(loginData.email, loginData.password);
+    registerUser(loginData.email, loginData.password, loginData.name);
   };
 
   return (
@@ -35,10 +36,19 @@ const Register = () => {
               <TextField
                 style={{ width: "100%", marginBottom: "10px" }}
                 id="standard-basic"
+                label="Name"
+                name="name"
+                onBlur={handleOnBlur}
+                variant="standard"
+              />
+
+              <TextField
+                style={{ width: "100%", marginBottom: "10px" }}
+                id="standard-basic"
                 label="Email"
                 type="email"
                 name="email"
-                onChange={handleChange}
+                onBlur={handleOnBlur}
                 variant="standard"
               />
 
@@ -48,7 +58,7 @@ const Register = () => {
                 label="Password"
                 name="password"
                 type="password"
-                onChange={handleChange}
+                onBlur={handleOnBlur}
                 variant="standard"
               />
               <TextField
@@ -57,7 +67,7 @@ const Register = () => {
                 label="Password Repeat"
                 name="password2"
                 type="password"
-                onChange={handleChange}
+                onBlur={handleOnBlur}
                 variant="standard"
               />
               <Button

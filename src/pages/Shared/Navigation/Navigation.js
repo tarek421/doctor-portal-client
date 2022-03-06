@@ -34,7 +34,7 @@ const Navigation = () => {
             <Nav.Link as={Link} to="/apoinment">Apoinment</Nav.Link>
             <Nav.Link as={Link} to="/service">Dental Services</Nav.Link>
             <Nav.Link as={Link} to="/rivew">Rivew</Nav.Link>
-            <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
+            <Nav.Link as={Link} to="/dashboard/patient">Dashboard</Nav.Link>
             <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
             <div>
               <IconButton

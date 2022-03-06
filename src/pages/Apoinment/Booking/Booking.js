@@ -2,7 +2,7 @@ import { Button, CardActions, Paper } from "@mui/material";
 import React, { useState } from "react";
 import BookingModal from "../BookingModal/BookingModal";
 
-const Booking = ({ booking }) => {
+const Booking = ({ booking, setBookingSuccess }) => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -24,7 +24,7 @@ const Booking = ({ booking }) => {
             </Button>
           </CardActions>
         </Paper>
-        <BookingModal open={open} setOpen={setOpen} booking={booking} />
+        <BookingModal open={open} setOpen={setOpen} setBookingSuccess={setBookingSuccess} booking={booking} />
       </div>
   );
 };

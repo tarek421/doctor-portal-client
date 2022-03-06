@@ -4,6 +4,7 @@ import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import StaticDatePicker from "@mui/lab/StaticDatePicker";
 import { userContext } from "../../../App";
+import './Calender.css';
 
 const Calender = () => {
   const [date, setDate] = useContext(userContext);
