@@ -37,7 +37,7 @@ const BookingModal = ({ open, setOpen, booking, setBookingSuccess }) => {
       time,
       date:date.toLocaleDateString()
     }
-     fetch('http://localhost:5000/appointments', {
+     fetch('https://rocky-harbor-59757.herokuapp.com/appointments', {
       method: 'POST',
       headers: {
           'content-type': 'application/json'

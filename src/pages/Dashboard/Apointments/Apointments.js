@@ -18,11 +18,11 @@ const Apointments = () => {
   const {user} = useAuth();
   const localDate = date.toLocaleDateString();
   useEffect(() => {
-    const url = `http://localhost:5000/appointments?email=${user.email}&date=${localDate}`;
+    const url = `https://rocky-harbor-59757.herokuapp.com/appointments?email=${user.email}&date=${localDate}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setApoinmentData(data));
-  }, [date]);
+  }, [localDate, user.email]);
   return (
     <TableContainer style={{ height: 420, width: "100%" }} component={Paper}>
       <Table aria-label="simple table">
