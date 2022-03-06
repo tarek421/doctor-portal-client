@@ -41,7 +41,9 @@ function App() {
               <Dashboard />
             </PrivetRoute>} /> */}
             <Route path="/login" element={<Login />} />
-            <Route path="/dashboard" element={<Dashboard />}>
+            <Route path="/dashboard" element={<PrivetRoute>
+              <Dashboard />
+            </PrivetRoute>}>
               <Route
                 path="makeAdmin"
                 element={
