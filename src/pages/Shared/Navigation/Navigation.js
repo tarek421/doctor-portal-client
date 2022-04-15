@@ -26,7 +26,7 @@ const Navigation = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#home">Doctor Portal</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
@@ -79,14 +79,3 @@ const Navigation = () => {
 
 export default Navigation;
 
-// <div className="navbar-right">
-// <ul className="d-flex justify-content-center align-items-center">
-//   <li>Home</li>
-//   <li>About</li>
-//   <li>Dental Services</li>
-//   <li>Review</li>
-//   <li>Blog</li>
-//   <li>Contact Us</li>
-// </ul>
-
-// </div>
