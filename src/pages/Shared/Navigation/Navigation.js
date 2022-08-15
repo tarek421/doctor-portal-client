@@ -26,16 +26,16 @@ const Navigation = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">Doctor Portal</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/home">Doctor Portal</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link as={Link} to="/home">Home</Nav.Link>
             <Nav.Link as={Link} to="/apoinment">Apoinment</Nav.Link>
-            <Nav.Link as={Link} to="/service">Dental Services</Nav.Link>
-            <Nav.Link as={Link} to="/rivew">Rivew</Nav.Link>
+            {/* <Nav.Link as={Link} to="/service">Dental Services</Nav.Link>
+            <Nav.Link as={Link} to="/rivew">Rivew</Nav.Link> */}
             <Nav.Link as={Link} to="/dashboard/patient">Dashboard</Nav.Link>
-            <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
+            <Nav.Link href="#contact">Contact Us</Nav.Link>
             <div>
               <IconButton
                 size="large"
